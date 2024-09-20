@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-pwa-cache-v2';
+const CACHE_NAME = 'my-pwa-cache-v1';
 const urlsToCache = [
   '/',
   '/script.js',
@@ -30,6 +30,7 @@ self.addEventListener('activate', (event) => {
   );
   return self.clients.claim();
 });
+
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
